@@ -51,7 +51,7 @@ for (let i =0; i < clase2.length; i++) {
 class Persona{
     constructor(id, nom, ed, g){
 
-   this.id=id;
+    this.id=id;
     this.nombre=nom;
     this.edad=ed;
     this.genero=g;
