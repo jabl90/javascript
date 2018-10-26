@@ -72,9 +72,9 @@ function operarnumerosarray(array,op){
     let array=[2,4,6,8,9];
     let suma =[0]+[1]+[2]+[3]+[4]; 
 
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < (array.length); i++) {
         suma= array[i];
-        
+
         if (op == '+') {
 
             return suma;
