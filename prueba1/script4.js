@@ -24,7 +24,7 @@ console.log(generarnombrecompleto(u2_name,u2_apellido));
 console.log(generarnombrecompleto('Ruben','Darío')); //le puedo dar valores concretos a los parámetros
 */
 
-/*let numero1 = 4;
+let numero1 = 4;
 let numero2 = 3;
 
 function operarnumeros(num1, num2, op) {
@@ -56,8 +56,8 @@ function operarnumeros(num1, num2, op) {
         return div;
 
     }
-    else{
-        if(num2==0) return 0;
+    else {
+        if (num2 == 0) return 0;
     }
 
     console.log(operarnumeros(4, 6, '+'));
@@ -65,25 +65,38 @@ function operarnumeros(num1, num2, op) {
     console.log(operarnumeros(4, 6, '*'));
     console.log(operarnumeros(4, 6, '/'));
 }
-*/
+function operarnumerosarray(array, op) {
 
-function operarnumerosarray(array,op){
+    let array = [2, 4, 6, 4, 1];
 
-    let array=[2,4,6,8,9];
-    let suma =[0]+[1]+[2]+[3]+[4]; 
+        let resultado = 0;
 
-    for (let i = 0; i < (array.length); i++) {
-        suma= array[i];
+        if (op=='+') {
 
-        if (op == '+') {
-
-            return suma;
-            
+        for (let i = 0; i < array.length; i++) {
+            resultado=resultado+array[i];
+            console.log(operarnumerosarray(resultado,'+'))
         }
+        return resultado;
     }
-    console.log(operarnumerosarray(suma,'+'))
-    
 }
-
-
    
+
+
+
+
+
+
+
+
+
+/*console.log(operarnumerosarray(array, '-')) //17
+console.log(operarnumerosarray(array, '*')) //17
+console.log(operarnumerosarray(array, '/')) //17*/
+
+
+
+
+
+
+
