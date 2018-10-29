@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="piano.css">
+    <title>Piano</title>
+</head>
+<body>
+    <!--Piano, Lista de notas. Cada nota es un objeto, con un nombre, un sonido y un tono(true or false)
+    Cada vez que se haga clic es una nota, debe sonar el sonido asociado. Position absolute para las teclas negras-->
+
+    <section id="teclaspiano">
+            <div><button class='note' data-sound='./wav/a1.wav'></button></div>
+            <div class="semi"><button id="negra1" class="note" data-sound="./wav/a1s.wav"></button></div>
+            <div><button class="note" data-sound="./wav/b1.wav"></button></div>
+            <div class="semi"><button id="negra2" class="note" data-sound="./wav/b1s.wav"></button></div>
+            <div><button class="note" data-sound="./wav/c1.wav"></button></div>
+            <div><button class="note" data-sound="./wav/b1s.wav"></button></div>
+            <div class="semi"><button id="negra3" class="note" data-sound="./wav/c1s.wav"></button></div>
+            <div><button class="note" data-sound="./wav/f1s.wav"></button></div>
+            <div class="semi"><button id="negra4" class="note" data-sound="./wav/d1s.wav"></button></div>
+            <div><button class="note" data-sound="./wav/g1s.wav"></button></div>
+            <div class="semi"><button id="negra5" class="note" data-sound="./wav/f1s.wav"></button></div>
+            <div><button class="note" data-sound="./wav/g1.wav"></button></div>
+    </section>
+    
+</body>
+<script src="./piano.js"></script>
+</html>

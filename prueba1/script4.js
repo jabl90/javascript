@@ -59,44 +59,48 @@ function operarnumeros(num1, num2, op) {
     else {
         if (num2 == 0) return 0;
     }
-
+/*
     console.log(operarnumeros(4, 6, '+'));
     console.log(operarnumeros(4, 6, '-'));
     console.log(operarnumeros(4, 6, '*'));
     console.log(operarnumeros(4, 6, '/'));
 }
-function operarnumerosarray(array, op) {
+function operarnumerosarray(resultado, array, op) {
 
     let array = [2, 4, 6, 4, 1];
+ 
+        let resultado;
 
-        let resultado = 0;
-
-        if (op=='+') {
-
+        if (op=='+') resultado = 0;
+            else if (op == '-') resultado = array && array[0]?array[0]:0;
+            else if (op == '*') resultado = 1;
+            else if (op == '/') resultado = array && array[0]?array[0]:0;
+    
         for (let i = 0; i < array.length; i++) {
             resultado=resultado+array[i];
-            console.log(operarnumerosarray(resultado,'+'))
         }
-        return resultado;
+        return operarnumeros(resultado, array[i], '+');
     }
-}
-   
-
-
-
-
-
-
-
-
-
-/*console.log(operarnumerosarray(array, '-')) //17
-console.log(operarnumerosarray(array, '*')) //17
-console.log(operarnumerosarray(array, '/')) //17*/
-
-
-
-
-
-
-
+    console.log(operarnumerosarray(resultado,'+'));
+    console.log(operarnumerosarray(resultado,'-'));
+    console.log(operarnumerosarray(resultado,'*'));
+    console.log(operarnumerosarray(resultado,'/'));
+*/
+    function opNumArr(arr, op) {
+        let resultado;
+     
+        if (op == '+')  resultado = 0;
+        else if (op == '-') { //resultado = (arr && arr[0])?arr[0]:0;
+        }
+        else if (op == '*'){ resultado = 1;
+        }
+        else if (op == '/') {resultado = (arr && arr[0])?arr[0]:0;
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if((op=='-'||op=='/') && i==0) resultado=arr[0];
+           else resultado = operarNumeros(resultado , arr[i],op);
+        }
+     
+        return resultado;
+     }
+    }

@@ -1,0 +1,39 @@
+body{color: black;
+     background-color: lightskyblue;
+     margin: 150px;
+     border: 2px solid darkblue;
+     padding: 10px;
+     width: 50%;
+     height: 70%;
+     text-align: left;   
+
+}
+
+img{margin-left: 5px;}
+
+ul > li img{width: 70px;}
+ul > li *{ display:inline-block;
+        }
+
+ul > li >p{text-align:center;}
+
+li { list-style:none;}
+
+button.saluda{
+    width: 75px;
+    height: 30px;
+      background-color: green;
+    color: white;
+    border:1px solid black;
+   display: inline-block;
+   }
+   button.borra{
+    width: 75px;
+    height: 30px;
+      background-color: rgb(216, 9, 9);
+    color: white;
+    border:1px solid black;
+    display: inline-block;
+    
+   }
+
