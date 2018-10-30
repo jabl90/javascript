@@ -1,0 +1,12 @@
+body{font-style: normal; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    background-color: lightskyblue;
+    margin: 100px;
+}
+
+button{color:white;
+    background-color: orangered;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
