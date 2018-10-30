@@ -1,61 +1,18 @@
 
-body{margin: 100px;
-     padding: 30px;}
-
-section > div {display: inline-block;
-      float:left;
-               
-               
-               
-             
-                } 
-
-#negra1{position: absolute;
-      background-color:black;
-      margin-left: -15px;
-      height: 60px;
-      width: 25px;
-      }
-      
-      
-#negra2{position: absolute;
-    
-      background-color:black;
-      margin-left: -15px;
-      height: 60px;
-      width: 25px;
-      }
-      
-#negra3{position: absolute;
+body{
+      padding: 0;
+      margin: 0;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   }
    
-      background-color:black;
-      margin-left: -15px;
-      height: 60px;
-      width: 25px;
-      
-      }
-      
-#negra4{position: absolute;
+   section{
+      margin: 0 auto;
+   }
    
-      background-color:black;
-      margin-left: -15px;
-      height: 60px;
-      width: 25px;
-      }
-      
-#negra5{position: absolute;
-    
-      background-color:black;
-      margin-left: -15px;
-      height: 60px;
-      width: 25px;
-      }
-      .semi{position: absolute;
-    
-        background-color:black;
-        color: black;
-      }
-
-button{height: 80px;
+   section div{display: inline-block; width: 40px; height: 150px; border: 1px solid;}
+   section div.semi{
+      position: absolute;
+      background-color: black;
+      margin-left: -20px;
       width: 30px;
-     }
+      height: 100px;

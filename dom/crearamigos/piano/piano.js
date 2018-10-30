@@ -1,33 +1,38 @@
-let piano=[
-    {tecla: 'do', sonido:'./wav/a1.wav', tono:true},
-    {tecla: 'dos', sonido:'./wav/a1s.wav', tono:false},
-    {tecla: 're', sonido:'./wav/b1.wav', tono:true},
-    {tecla: 'res', sonido:'./wav/b1s.wav', tono:false},
-    {tecla: 'mi', sonido:'./wav/c1.wav', tono:true},
-    {tecla: 'fa', sonido:'./wav/c2.wav', tono:true},
-    {tecla: 'do', sonido:'./wav/c1s.wav', tono:false},
-    {tecla: 'sol',sonido:'./wav/d1.wav',tono:true},
-    {tecla: 'do', sonido:'./wav/d1s.wav', tono:false},
-    {tecla: 'la', sonido:'./wav/f1s.wav', tono:false},
-    {tecla: 'do', sonido:'./wav/g1s.wav', tono:false},
-    {tecla: 'si', sonido:'./wav/g1.wav', tono:true}
-    
-    
-]
-
-function elpiano () {
-    let listateclas = document.getElementById('teclaspiano');
-    for (let index = 0; index < teclasdepiano.length; index++) {
-        listateclas.onclick=function() {
-       this.teclasdepiano[index].tecla
-       this.teclasdepiano[index].sonido
-       this.teclasdepiano[index].tono
-
-       alert(this.getAttribute(teclasdepiano))
-        
-    }
-}
-}
-elpiano(piano);
-
+let notas = [
+    { nombre: 'do', sonido: './wav/c1.wav', tono: true },
+    { nombre: 'dos', sonido: './wav/c1s.wav', tono: false },
+    { nombre: 're', sonido: './wav/d1.wav', tono: true },
+    { nombre: 'res', sonido: './wav/d1s.wav', tono: false },
+    { nombre: 'mi', sonido: './wav/e1.wav', tono: true },
+    { nombre: 'fa', sonido: './wav/f1.wav', tono: true },
+    { nombre: 'fas', sonido: './wav/f1s.wav', tono: false },
+    { nombre: 'sol', sonido: './wav/g1.wav', tono: true },
+    { nombre: 'sols', sonido: './wav/g1s.wav', tono: false },
+    { nombre: 'la', sonido: './wav/a1.wav', tono: true },
+    { nombre: 'las', sonido: './wav/a1s.wav', tono: false },
+    { nombre: 'si', sonido: './wav/b1.wav', tono: true },
+ ];
+ 
+ function generateStructure(arrNotes, divN) {
+    let finalHtml = '';
+ 
+    arrNotes.forEach(element => {
+        finalHtml += element.tono ? `<div class="note" data-snd="${element.sonido}"></div>` : `<div class="note semi" data-snd="${element.sonido}"></div>`;
+    });
+ 
+    document.getElementById(divN).innerHTML = finalHtml;
+    associateAndPlayNotes();
+ }
+ 
+ function associateAndPlayNotes() {
+    let player = document.getElementById('player');
+ 
+    document.querySelectorAll('.note').forEach(element => {
+        element.onclick = function () {
+            player.src = this.getAttribute('data-snd');
+            player.play();
+        }
+    });
+ 
+ }
 
