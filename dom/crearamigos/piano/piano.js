@@ -1,4 +1,4 @@
-let notas = [
+/*let notas = [
     { nombre: 'do', sonido: './wav/c1.wav', tono: true },
     { nombre: 'dos', sonido: './wav/c1s.wav', tono: false },
     { nombre: 're', sonido: './wav/d1.wav', tono: true },
@@ -20,11 +20,29 @@ let notas = [
         finalHtml += element.tono ? `<div class="note" data-snd="${element.sonido}"></div>` : `<div class="note semi" data-snd="${element.sonido}"></div>`;
     });
  
-    document.getElementById(divN).innerHTML = finalHtml;
-    associateAndPlayNotes();
- }
+    
  
- function associateAndPlayNotes() {
+ 
+ }*/
+    $.ajax({
+        url: "http://www.mocky.io/v2/5bd886393100001039474ef5",
+    }).done(function (datanotas) {
+        console.log();
+        generarStructure(datanotas, 'piano');
+        //  associateAndPlayNotes('data-snd', '#player');
+    });
+
+function generarStructure(datanotas, divN) {
+    $('.piano').html(function () {
+        let finalHtml = '';
+        datanotas.forEach(element => {
+            finalHtml += element.tono ? `<div class="note" data-snd="${element.sonido}"></div>` : `<div class="note semi" data-snd="${element.sonido}"></div>`;
+        });
+        return htmlamigos;
+    });
+}
+
+function associateAndPlayNotes() {
     let player = document.getElementById('player');
  
     document.querySelectorAll('.note').forEach(element => {
@@ -33,6 +51,8 @@ let notas = [
             player.play();
         }
     });
- 
+    document.getElementById('piano').innerHTML = finalHtml;
+    associateAndPlayNotes();
  }
+ 
 
