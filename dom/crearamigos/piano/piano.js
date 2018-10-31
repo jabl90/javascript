@@ -24,13 +24,14 @@
  
  
  }*/
-    $.ajax({
-        url: "http://www.mocky.io/v2/5bd886393100001039474ef5",
-    }).done(function (datanotas) {
-        console.log();
-        generarStructure(datanotas, 'piano');
-        //  associateAndPlayNotes('data-snd', '#player');
-    });
+$.ajax({
+    url: "http://www.mocky.io/v2/5bd886393100001039474ef5",
+}).done(function (datanotas) {
+    console.log(datanotas);
+    generarStructure(datanotas, 'piano');
+    associateAndPlayNotes();
+    //  associateAndPlayNotes('data-snd', '#player');
+});
 
 function generarStructure(datanotas, divN) {
     $('.piano').html(function () {
@@ -44,15 +45,19 @@ function generarStructure(datanotas, divN) {
 
 function associateAndPlayNotes() {
     let player = document.getElementById('player');
- 
+
     document.querySelectorAll('.note').forEach(element => {
         element.onclick = function () {
             player.src = this.getAttribute('data-snd');
             player.play();
         }
+
+        document.getElementById('piano').innerHTML = finalHtml;
+        associateAndPlayNotes();
     });
-    document.getElementById('piano').innerHTML = finalHtml;
-    associateAndPlayNotes();
- }
- 
+
+}
+
+
+
 
