@@ -6,7 +6,7 @@ $('#holabtn').click(function () { //$ es indempotente: el objeto resultante de l
 
 $('h1').html('holaaaaa').click(function () {
     alert('Este es el título');
-}).html('otro título'); //Ejemplo de idempotencia
+}).html('vamos geta'); //Ejemplo de idempotencia
 
 //lo que recibo del servidor
 let amigos = [
@@ -20,7 +20,7 @@ let amigos = [
 $('#amigos').html(function () {
     let htmlamigos = '';
     amigos.forEach(unamigo => {
-        htmlamigos += `<li>${unamigo.name}
+        htmlamigos += `<li>${unamigo.email}
       <div><button class='saluda' data-value="${'hola ' + unamigo.name}">Saludar</button></div></li>`;
 
     })
